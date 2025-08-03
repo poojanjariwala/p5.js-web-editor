@@ -3,6 +3,9 @@ import { remSize, prop } from '../../theme';
 
 export const AboutPageContent = styled.div`
   margin: ${remSize(42)} ${remSize(295)};
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
+  min-height: 100vh;
 
   @media (max-width: 1279px) {
     margin: ${remSize(20)};
@@ -13,9 +16,13 @@ export const AboutPageContent = styled.div`
 `;
 
 export const Intro = styled.div`
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
+
   & h1 {
     font-size: ${remSize(32)};
     font-weight: 700;
+    color: ${prop('primaryTextColor')};
   }
 
   & a {
@@ -26,6 +33,8 @@ export const Intro = styled.div`
     align-items: center;
     width: ${remSize(110)};
     justify-content: space-evenly;
+    color: ${prop('primaryTextColor')};
+    background-color: ${prop('backgroundColor')};
 
     &:hover {
       color: ${prop('Button.primary.default.background')};
@@ -45,6 +54,8 @@ export const Intro = styled.div`
 export const IntroHeadline = styled.div`
   display: flex;
   align-items: center;
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   & div {
     height: 100%;
@@ -52,6 +63,7 @@ export const IntroHeadline = styled.div`
     font-weight: 550;
     font-size: ${remSize(24)};
     margin: ${remSize(24)};
+    color: ${prop('primaryTextColor')};
   }
 
   & svg {
@@ -74,19 +86,25 @@ export const IntroDescription = styled.div`
   line-height: ${remSize(27)};
   font-size: ${remSize(16)};
   margin: ${remSize(24)} 0;
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   p {
     margin-bottom: ${remSize(24)};
+    color: ${prop('primaryTextColor')};
   }
 `;
 
 export const Section = styled.div`
   margin: ${remSize(50)} 0;
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   & h2 {
     font-size: ${remSize(24)};
     padding-bottom: ${remSize(30)};
     font-weight: 600;
+    color: ${prop('primaryTextColor')};
   }
 
   @media (max-width: 769px) {
@@ -101,6 +119,8 @@ export const SectionContainer = styled.div`
   font-size: ${remSize(16)};
   width: 100%;
   flex-wrap: wrap;
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   @media (max-width: 769px) {
     display: grid;
@@ -113,19 +133,24 @@ export const SectionItem = styled.div`
   line-height: ${remSize(19.5)};
   font-size: ${remSize(14)};
   padding: 0 ${remSize(30)} ${remSize(30)} 0;
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   & p {
     margin-top: ${remSize(7)};
+    color: ${prop('primaryTextColor')};
   }
 
   & a {
     font-weight: 700;
     font-size: ${remSize(16)};
     text-decoration: underline;
+    color: ${prop('primaryTextColor')};
 
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 0.1em;
+      color: ${prop('primaryTextColor')};
     }
   }
 
@@ -151,10 +176,13 @@ export const SectionItem = styled.div`
 
 export const Contact = styled.div`
   margin-bottom: ${remSize(50)};
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   & h2 {
     font-size: ${remSize(24)};
     font-weight: 600;
+    color: ${prop('primaryTextColor')};
   }
 
   & div {
@@ -162,11 +190,13 @@ export const Contact = styled.div`
     width: 100%;
     margin: ${remSize(20)} 0;
     font-size: ${remSize(16)};
+    color: ${prop('primaryTextColor')};
   }
 `;
 
 export const ContactTitle = styled.p`
   width: 50%;
+  color: ${prop('primaryTextColor')};
 
   @media (max-width: 769px) {
     width: 30%;
@@ -175,6 +205,7 @@ export const ContactTitle = styled.p`
 
 export const ContactHandles = styled.p`
   width: 50%;
+  color: ${prop('primaryTextColor')};
 
   & a {
     color: ${prop('logoColor')};
@@ -182,6 +213,7 @@ export const ContactHandles = styled.p`
 
     &:hover {
       text-decoration: underline;
+      color: ${prop('logoColor')};
     }
   }
 
@@ -191,10 +223,12 @@ export const ContactHandles = styled.p`
 `;
 
 export const Footer = styled.div`
-  border-top: 0.1rem dashed;
+  border-top: 0.1rem dashed ${prop('primaryTextColor')};
   padding: 0 ${remSize(20)} ${remSize(70)} 0;
   width: 100%;
   font-size: ${remSize(16)};
+  background-color: ${prop('backgroundColor')};
+  color: ${prop('primaryTextColor')};
 
   & div {
     display: flex;
@@ -210,11 +244,13 @@ export const Footer = styled.div`
     &:hover {
       text-decoration: underline;
       text-decoration-thickness: 0.1em;
+      color: ${prop('logoColor')};
     }
   }
 
   & p {
     padding: ${remSize(20)} 9.5% 0 0;
+    color: ${prop('primaryTextColor')};
   }
 
   @media (max-width: 770px) {
